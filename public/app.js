@@ -72,7 +72,7 @@ async function cargarMensajes() {
 
     for (const mensaje of mensajes) {
       const tarjeta = document.createElement("article")
-      tarjeta.classList.add("tarjeta-mensaje")
+      tarjeta.classList.add("tarjeta", "tarjeta-mensaje")
 
       tarjeta.innerHTML = `
         <h3>${mensaje.titulo}</h3>
@@ -105,7 +105,7 @@ async function cargarCalendario() {
 
     for (const pieza of calendario) {
       const tarjeta = document.createElement("article")
-      tarjeta.classList.add("tarjeta-mensaje")
+      tarjeta.classList.add("tarjeta", "tarjeta-mensaje")
 
       tarjeta.innerHTML = `
         <h3>Semana ${pieza.semana} - ${pieza.dia}</h3>
@@ -164,8 +164,8 @@ async function cargarRevisionEditorial() {
       contenedorRevisionEditorial.innerHTML = ""
   
       const tarjeta = document.createElement("article")
-      tarjeta.classList.add("tarjeta-mensaje")
-  
+      tarjeta.classList.add("tarjeta", "tarjeta-mensaje")
+
       tarjeta.innerHTML = `
         <h3>Revisión editorial protegida</h3>
         <p>${datos.mensaje}</p>
